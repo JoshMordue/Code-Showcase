@@ -12,6 +12,27 @@ def is_palindrome_sentence(sentence):  # method for sentence, overcoming spaces 
 
 
 def diff_palindrome_sentence(sentence):
+    """
+   Get a String from Standard Input (stdin) to ascertain whether
+   the String is a palindrome.
+
+   The function will first strip the punctuation and spaces from the string.
+   Assigning the cleansed string to the variable string
+
+   It will then create the variable "num_checks", this variable is assigned
+   the length of the string divided by 2. As we're checking for a palindrome
+   we do not require half the characters tested.
+   The 'I' variable is assigned for matching the first index character of the
+   String with the last character being assigned to 'J'.
+
+   It will then loop to compare the letters whilst incrementing 'i' &
+   decrementing 'j' until it reaches the middle character (num_checks value)
+
+   :param string: The sentence to check.
+
+   :return: True or False whether the entered 'String' is a
+       Palindrome
+   """
     string = ""
     # variable to remove spaces/punctuation
 
