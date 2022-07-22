@@ -1,16 +1,3 @@
-def is_palindrome(string):  # method for singular word
-    return string[::-1].casefold() == string.casefold()
-
-
-def is_palindrome_sentence(sentence):  # method for sentence, overcoming spaces and punctuation
-    string = ""
-    for char in sentence:
-        if char.isalnum():
-            string += char
-    print(string)
-    return string[::-1].casefold() == string.casefold()
-
-
 def diff_palindrome_sentence(sentence):
     """
    Get a String from Standard Input (stdin) to ascertain whether
@@ -65,13 +52,3 @@ if diff_palindrome_sentence(word):
 else:
     print("'{}' is not a palindrome".format(word))
 
-
-# if is_palindrome(word):
-#     print("'{}' is a palindrome".format(word))
-# else:
-#     print("'{}' is not a palindrome".format(word))
-
-# if is_palindrome_sentence(word):
-#     print("'{}' is a palindrome".format(word))
-# else:
-#     print("'{}' is not a palindrome".format(word))
