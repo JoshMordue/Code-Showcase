@@ -28,7 +28,7 @@ def diff_palindrome_sentence(sentence):
    It will then loop to compare the letters whilst incrementing 'i' &
    decrementing 'j' until it reaches the middle character (num_checks value)
 
-   :param string: The sentence to check.
+   :param sentence: The sentence to check.
 
    :return: True or False whether the entered 'String' is a
        Palindrome
