@@ -1,4 +1,4 @@
-def diff_palindrome_sentence(sentence):
+def palindrome_check(sentence: str) -> bool:
     """
    Get a String from theStandard Input (stdin) to ascertain whether
    the String is a palindrome.
@@ -46,7 +46,7 @@ def diff_palindrome_sentence(sentence):
 
 word = input("Please enter a word to check: ")
 
-if diff_palindrome_sentence(word):
+if palindrome_check(word):
     print("'{}' is a palindrome".format(word))
 else:
     print("'{}' is not a palindrome".format(word))
