@@ -33,7 +33,7 @@ number_of_guesses = 0
 
 chosen_word = word_list[random.randint(1, len(word_list))]
 
-print(chosen_word)
+
 
 print('Welcome to a replayable wordle')
 print("*" * 70)
@@ -52,6 +52,7 @@ while True:
     number_of_guesses += 1
 
     if number_of_guesses > 5:
+        print(chosen_word)
         print('You have lost!')
 
 
