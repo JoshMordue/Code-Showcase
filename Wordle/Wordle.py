@@ -1,5 +1,6 @@
 import random
 
+
 def read_words(x):
     """function reads in words and assigns it to variable 'Possible Words'"""
     with open(x, encoding='utf8', newline='') as word_data:
@@ -34,8 +35,7 @@ number_of_guesses = 0
 chosen_word = word_list[random.randint(1, len(word_list))]
 
 
-
-print('Welcome to a replayable wordle')
+print('Welcome to wordle')
 print("*" * 70)
 
 print('Please guess a word between with 5 characters: ')
