@@ -12,6 +12,8 @@ def read_words(x):
 
 
 def guess_check(users_guess, answer):
+    """compares the users guess with the chosen word, if it's correct letter in the correct place
+    mark it as green, if it's correct letter in an incorrect spot colour it yellow - otherwise grey"""
     if guess == chosen_word:
         return True
 
@@ -33,7 +35,6 @@ word_list = read_words(filename)
 number_of_guesses = 0
 
 chosen_word = word_list[random.randint(1, len(word_list))]
-
 
 print('Welcome to wordle')
 print("*" * 70)
