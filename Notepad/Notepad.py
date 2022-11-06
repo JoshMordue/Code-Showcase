@@ -10,9 +10,7 @@ def read_notes(x):
         print()
         print("As this is your first time loading this application, a new 'Note.txt' file will be generated")
         print()
-        with open('Notes.txt', 'w') as notes_file:
-
-
+        open('Notes.txt', 'w').close()
 
 
 
