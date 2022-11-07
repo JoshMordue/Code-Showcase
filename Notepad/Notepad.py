@@ -26,6 +26,11 @@ def read_notes(x):
             sys.exit()
 
 
+def view_notes(x):
+    for num, note in enumerate(notes):
+        print(num, note)
+
+
 def menu():
     print("NotePad!")
     print("*" * 10)
@@ -33,6 +38,8 @@ def menu():
     print("Please enter 'E' to edit a note")
     print("Please enter 'D' to delete a specified note")
     print("Please enter '' to delete a specified note")
+
+
 
 
 
@@ -44,3 +51,6 @@ while True:
     print(notes)
 
     choice = input("Please enter your choice: ")
+
+    if choice == "V":
+        view_notes(notes)
