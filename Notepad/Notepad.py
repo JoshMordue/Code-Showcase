@@ -4,9 +4,9 @@ import sys
 def read_notes(x):
     """Function to retrieve notes if they exist, if it does not create an empty """
     try:
-        with open('Notes.txt', 'r') as notes_file:
+        with open('Notes.txt', 'r', encoding='utf-8') as notes_file:
             for line in notes_file:
-                x.append(line)
+                x.append(line.strip("\n"))
         return x
 
     except FileNotFoundError:
@@ -27,8 +27,9 @@ def read_notes(x):
 
 
 def view_notes(x):
-    for num, note in enumerate(notes):
-        print(num, note)
+    for num, note in enumerate(x):
+        print(x)
+        print("{0}: {1}".format(num + 1, note))
 
 
 def menu():
@@ -37,10 +38,6 @@ def menu():
     print("Please enter 'v' to view all notes")
     print("Please enter 'E' to edit a note")
     print("Please enter 'D' to delete a specified note")
-    print("Please enter '' to delete a specified note")
-
-
-
 
 
 notes = []
