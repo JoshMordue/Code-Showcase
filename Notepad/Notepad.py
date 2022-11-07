@@ -1,5 +1,5 @@
 def read_notes(x):
-    """Function to retrieve notes if they exist"""
+    """Function to retrieve notes if they exist, if it does not create an empty """
     try:
         with open('Notes.txt', 'r') as notes_file:
             for line in notes_file:
@@ -11,11 +11,6 @@ def read_notes(x):
         print("As this is your first time loading this application, a new 'Note.txt' file will be generated")
         print()
         open('Notes.txt', 'w').close()
-
-
-
-
-
 
 
 print("NotePad!")
