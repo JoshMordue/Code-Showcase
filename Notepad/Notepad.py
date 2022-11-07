@@ -61,15 +61,15 @@ def menu():
 
 
 notes = []
-read_notes(notes)
 
 print("NotePad!")
 print("*" * 10)
 menu()
 
 
-
 while True:
+    
+    read_notes(notes)
 
     choice = input("Please enter your choice: ").upper()
 
