@@ -68,7 +68,7 @@ menu()
 
 
 while True:
-    
+
     read_notes(notes)
 
     choice = input("Please enter your choice: ").upper()
