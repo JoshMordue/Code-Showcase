@@ -48,15 +48,12 @@ def save_changes(x):
         print(saved_notes)
         with open('Notes.txt', 'w', encoding='utf-8') as notes_file:
             notes_file.write(saved_notes)
-
         print("The changes have been saved.")
     except OSError:
         print("We encountered a problem saving to the directory, please assess your folder write permissions.")
 
 
 def menu():
-    print("NotePad!")
-    print("*" * 10)
     print("Please enter 'A' to add a note")
     print("Please enter 'v' to view all notes")
     print("Please enter 'E' to edit a note")
@@ -65,7 +62,12 @@ def menu():
 
 notes = []
 read_notes(notes)
+
+print("NotePad!")
+print("*" * 10)
 menu()
+
+
 
 while True:
 
