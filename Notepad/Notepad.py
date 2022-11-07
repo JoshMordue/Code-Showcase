@@ -35,21 +35,19 @@ def edit_notes(x):
     view_notes(x)
     edit_choice = int(input("Please specify the number: "))
     if edit_choice <= len(x):
+
         print("You're currently editing entry {0}".format(edit_choice))
         new_value = input("Please enter the edited note: ")
         x[edit_choice - 1] = new_value
-        save_changes(x)
-
     return x
 
 
 def save_changes(x):
     try:
+        saved_notes = '\n'.join(x)
+        print(saved_notes)
         with open('Notes.txt', 'w', encoding='utf-8') as notes_file:
-            notes_file.writelines(x)
-
-
-
+            notes_file.write(saved_notes)
 
         print("The changes have been saved.")
     except OSError:
@@ -70,12 +68,12 @@ read_notes(notes)
 menu()
 
 while True:
-    print(notes)
 
-    choice = input("Please enter your choice: ")
+    choice = input("Please enter your choice: ").upper()
 
     if choice == "V":
         view_notes(notes)
 
     if choice == "E":
         edit_notes(notes)
+        save_changes(notes)
