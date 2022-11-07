@@ -37,7 +37,7 @@ def edit_notes(x):
     if edit_choice <= len(x):
         print("You're currently editing entry {0}".format(edit_choice))
         new_value = input("Please enter the edited note: ")
-        x[edit_choice] = new_value
+        x[edit_choice - 1] = new_value
         save_changes(x)
 
     return x
@@ -46,7 +46,11 @@ def edit_notes(x):
 def save_changes(x):
     try:
         with open('Notes.txt', 'w', encoding='utf-8') as notes_file:
-            notes_file.write('\n')
+            notes_file.writelines(x)
+
+
+
+
         print("The changes have been saved.")
     except OSError:
         print("We encountered a problem saving to the directory, please assess your folder write permissions.")
