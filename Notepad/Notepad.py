@@ -53,6 +53,9 @@ def save_changes(x):
         print("We encountered a problem saving to the directory, please assess your folder write permissions.")
 
 
+def add_note(x):
+    
+
 def menu():
     print("Please enter 'A' to add a note")
     print("Please enter 'v' to view all notes")
