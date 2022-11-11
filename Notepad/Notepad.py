@@ -66,6 +66,25 @@ def add_note(x: list) -> list:
 
 
 def del_note(x: list) -> list:
+    view_notes(x)
+    print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
+    while True:
+        del_choice = int(input())
+
+        if del_choice == 0:
+            x = []
+            return x
+        elif del_choice <= len(x):
+            x.remove(del_choice - 1)
+            return x
+        elif del_choice
+
+
+
+
+
+
+
 
 
 
@@ -104,7 +123,7 @@ while True:
         edit_note(notes)
         save_changes(notes)
 
-    if choice == "A":
+    if choice == "D":
         del_note(notes)
         save_changes(notes)
 
