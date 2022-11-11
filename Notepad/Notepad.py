@@ -34,8 +34,10 @@ def view_notes(x: list):
 
 def edit_note(x: list) -> list:
     """function asks for the index position and replaces the entry with the new entered note"""
+    print("EDITING NOTES MENU")
+    print("*" * 50)
     view_notes(x)
-    edit_choice = int(input("Please specify the number: "))
+    edit_choice = int(input("Please specify the number of the entry: "))
     if edit_choice <= len(x):
 
         print("You're currently editing entry {0}".format(edit_choice))
@@ -58,6 +60,7 @@ def save_changes(x: list):
 
 def add_note(x: list) -> list:
     """requests input from the user for their new note, append the note to the new notes"""
+    print("ADDING NOTES MENU!")
     print("Please input your note below")
     print("-" * 30)
     new_note = input()
@@ -67,30 +70,24 @@ def add_note(x: list) -> list:
 
 def del_note(x: list) -> list:
     view_notes(x)
+    print("DELETING NOTES MENU!")
     print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
+    print("*" * 50)
     while True:
         del_choice = int(input())
 
         if del_choice == 0:
             x = []
             return x
-        elif del_choice <= len(x):
+
+        elif 0 < del_choice <= len(x):
             x.pop(del_choice - 1)
             return x
-        # elif del_choice:
-
-
-
-
-
-
-
-
 
 
 def menu():
     print("Please enter 'A' to add a note")
-    print("Please enter 'v' to view all notes")
+    print("Please enter 'V' to view all notes")
     print("Please enter 'E' to edit a note")
     print("Please enter 'D' to delete a specified note")
 
@@ -110,21 +107,29 @@ while True:
 
     if choice == "A":
         add_note(notes)
+        choice = ""
         save_changes(notes)
 
     if choice == "V":
+        choice = ""
         view_notes(notes)
 
     if choice == "E":
         edit_note(notes)
+        choice = ""
         save_changes(notes)
+
 
     if choice == "E":
         edit_note(notes)
+        choice = ""
         save_changes(notes)
+
 
     if choice == "D":
         del_note(notes)
+        choice = ""
         save_changes(notes)
+
 
 
