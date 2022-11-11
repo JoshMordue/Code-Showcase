@@ -32,7 +32,7 @@ def view_notes(x: list):
         print("{0}: {1}".format(num + 1, note))
 
 
-def edit_notes(x: list) -> list:
+def edit_note(x: list) -> list:
     """function asks for the index position and replaces the entry with the new entered note"""
     view_notes(x)
     edit_choice = int(input("Please specify the number: "))
@@ -65,6 +65,10 @@ def add_note(x: list) -> list:
     return x
 
 
+def del_note(x: list) -> list:
+
+
+
 def menu():
     print("Please enter 'A' to add a note")
     print("Please enter 'v' to view all notes")
@@ -93,11 +97,15 @@ while True:
         view_notes(notes)
 
     if choice == "E":
-        edit_notes(notes)
+        edit_note(notes)
         save_changes(notes)
 
     if choice == "E":
-        edit_notes(notes)
+        edit_note(notes)
+        save_changes(notes)
+
+    if choice == "A":
+        del_note(notes)
         save_changes(notes)
 
 
