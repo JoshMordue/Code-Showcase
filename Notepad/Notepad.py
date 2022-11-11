@@ -75,9 +75,9 @@ def del_note(x: list) -> list:
             x = []
             return x
         elif del_choice <= len(x):
-            x.remove(del_choice - 1)
+            x.pop(del_choice - 1)
             return x
-        elif del_choice
+        # elif del_choice:
 
 
 
