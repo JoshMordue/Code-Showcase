@@ -30,6 +30,7 @@ def view_notes(x: list):
     """function prints all the notes found in the notes.txt file"""
     for num, note in enumerate(x):
         print("{0}: {1}".format(num + 1, note))
+        return x
 
 
 def edit_note(x: list) -> list:
@@ -39,10 +40,10 @@ def edit_note(x: list) -> list:
     view_notes(x)
     edit_choice = int(input("Please specify the number of the entry: "))
     if edit_choice <= len(x):
-
         print("You're currently editing entry {0}".format(edit_choice))
         new_value = input("Please enter the edited note: ")
         x[edit_choice - 1] = new_value
+        save_changes(x)
     return x
 
 
@@ -50,7 +51,6 @@ def save_changes(x: list):
     """saves the supplied (altered) list to be the new values in the notepad.txt file"""
     try:
         saved_notes = '\n'.join(x)
-        print(saved_notes)
         with open('Notes.txt', 'w', encoding='utf-8') as notes_file:
             notes_file.write(saved_notes)
         print("The changes have been saved.")
@@ -65,7 +65,8 @@ def add_note(x: list) -> list:
     print("-" * 30)
     new_note = input()
     x.append(new_note)
-    return x
+    save_changes(x)
+
 
 
 def del_note(x: list) -> list:
@@ -78,10 +79,12 @@ def del_note(x: list) -> list:
 
         if del_choice == 0:
             x = []
+            save_changes(x)
             return x
 
         elif 0 < del_choice <= len(x):
             x.pop(del_choice - 1)
+            save_changes(x)
             return x
 
 
@@ -107,29 +110,22 @@ while True:
 
     if choice == "A":
         add_note(notes)
-        choice = ""
-        save_changes(notes)
 
     if choice == "V":
-        choice = ""
         view_notes(notes)
 
     if choice == "E":
         edit_note(notes)
-        choice = ""
-        save_changes(notes)
 
 
     if choice == "E":
         edit_note(notes)
-        choice = ""
-        save_changes(notes)
 
 
     if choice == "D":
         del_note(notes)
-        choice = ""
-        save_changes(notes)
+
+
 
 
 
