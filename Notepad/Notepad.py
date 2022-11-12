@@ -7,7 +7,6 @@ def read_notes(x):
         with open('Notes.txt', 'r', encoding='utf-8') as notes_file:
             for line in notes_file:
                 x.append(line.strip("\n"))
-        return x
 
     except FileNotFoundError:
         print()
@@ -28,12 +27,16 @@ def read_notes(x):
 
 def view_notes(x: list):
     """function prints all the notes found in the notes.txt file"""
+    print("VIEWING NOTES")
+    print("*" * 50)
+    if not x:
+        print("There are no notes present in your notepad")
     for num, note in enumerate(x):
         print("{0}: {1}".format(num + 1, note))
-        return x
+    return x
 
 
-def edit_note(x: list) -> list:
+def edit_note(x: list):
     """function asks for the index position and replaces the entry with the new entered note"""
     print("EDITING NOTES MENU")
     print("*" * 50)
@@ -44,7 +47,7 @@ def edit_note(x: list) -> list:
         new_value = input("Please enter the edited note: ")
         x[edit_choice - 1] = new_value
         save_changes(x)
-    return x
+        return x
 
 
 def save_changes(x: list):
@@ -53,12 +56,15 @@ def save_changes(x: list):
         saved_notes = '\n'.join(x)
         with open('Notes.txt', 'w', encoding='utf-8') as notes_file:
             notes_file.write(saved_notes)
+        print("-" * 20)
         print("The changes have been saved.")
+        print("-" * 20)
+        return x
     except OSError:
         print("We encountered a problem saving to the directory, please assess your folder write permissions.")
 
 
-def add_note(x: list) -> list:
+def add_note(x: list):
     """requests input from the user for their new note, append the note to the new notes"""
     print("ADDING NOTES MENU!")
     print("Please input your note below")
@@ -66,10 +72,10 @@ def add_note(x: list) -> list:
     new_note = input()
     x.append(new_note)
     save_changes(x)
+    return x
 
 
-
-def del_note(x: list) -> list:
+def del_note(x: list):
     view_notes(x)
     print("DELETING NOTES MENU!")
     print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
@@ -86,6 +92,7 @@ def del_note(x: list) -> list:
             x.pop(del_choice - 1)
             save_changes(x)
             return x
+        print("Please enter a valid note number to delete")
 
 
 def menu():
@@ -95,37 +102,35 @@ def menu():
     print("Please enter 'D' to delete a specified note")
 
 
-notes = []
-
 print("NotePad!")
 print("*" * 10)
-menu()
-
 
 while True:
-
+    notes = []
     read_notes(notes)
+
+    menu()
 
     choice = input("Please enter your choice: ").upper()
 
+    print("-" * 30)
+
     if choice == "A":
+        choice = ""
         add_note(notes)
 
     if choice == "V":
+        choice = ""
         view_notes(notes)
 
     if choice == "E":
+        choice = ""
         edit_note(notes)
-
 
     if choice == "E":
+        choice = ""
         edit_note(notes)
 
-
     if choice == "D":
+        choice = ""
         del_note(notes)
-
-
-
-
-
