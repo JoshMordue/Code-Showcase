@@ -2,7 +2,7 @@ import sys
 
 
 def read_notes(x):
-    """Function to retrieve notes if they exist, if it does not create an empty """
+    """Function to retrieve notes if they exist, if it does not create an empty file """
     try:
         with open('Notes.txt', 'r', encoding='utf-8') as notes_file:
             for line in notes_file:
