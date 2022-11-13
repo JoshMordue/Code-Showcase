@@ -28,7 +28,7 @@ def read_notes(x):
 def view_notes(x: list):
     """function prints all the notes found in the notes.txt file"""
     print("VIEWING NOTES")
-    print("*" * 50)
+    print("-" * 30)
     if not x:
         print("There are no notes present in your notepad")
     for num, note in enumerate(x):
@@ -39,7 +39,7 @@ def view_notes(x: list):
 def edit_note(x: list):
     """function asks for the index position and replaces the entry with the new entered note"""
     print("EDITING NOTES MENU")
-    print("*" * 50)
+    print("-" * 30)
     view_notes(x)
     edit_choice = int(input("Please specify the number of the entry: "))
     if edit_choice <= len(x):
@@ -80,7 +80,7 @@ def del_note(x: list):
     view_notes(x)
     print("DELETING NOTES MENU!")
     print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
-    print("*" * 50)
+    print("-" * 30)
     while True:
         del_choice = int(input())
 
@@ -98,6 +98,8 @@ def del_note(x: list):
 
 def menu():
     """print menu controls"""
+    print("MENU")
+    print("-" * 30)
     print("Please enter 'A' to add a note")
     print("Please enter 'V' to view all notes")
     print("Please enter 'E' to edit a note")
