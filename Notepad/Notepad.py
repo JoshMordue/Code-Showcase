@@ -76,6 +76,7 @@ def add_note(x: list):
 
 
 def del_note(x: list):
+    """delete notes using their index position, if provided with a  0 function will delete all notes"""
     view_notes(x)
     print("DELETING NOTES MENU!")
     print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
@@ -96,6 +97,7 @@ def del_note(x: list):
 
 
 def menu():
+    """print menu controls"""
     print("Please enter 'A' to add a note")
     print("Please enter 'V' to view all notes")
     print("Please enter 'E' to edit a note")
