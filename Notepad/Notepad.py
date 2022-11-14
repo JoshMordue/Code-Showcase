@@ -41,7 +41,10 @@ def edit_note(x: list):
     print("EDITING NOTES MENU")
     print("-" * 30)
     view_notes(x)
-    edit_choice = int(input("Please specify the number of the entry: "))
+    edit_choice = input("Please specify the number of the entry: ")
+    if edit_choice.lower() == "back":
+        return
+    edit_choice = int(edit_choice)
     if edit_choice <= len(x):
         print("You're currently editing entry {0}".format(edit_choice))
         new_value = input("Please enter the edited note: ")
@@ -71,7 +74,8 @@ def add_note(x: list):
     print("-" * 30)
     new_note = input()
 
-    back(new_note)
+    if new_note.lower() == "back":
+        return
 
     x.append(new_note)
     save_changes(x)
@@ -82,7 +86,7 @@ def del_note(x: list):
     """delete notes using their index position, if provided with a  0 function will delete all notes"""
     view_notes(x)
     print("DELETING NOTES MENU!")
-    print("Please input the specific note number you want deleted, if you wish to delete all notes type 0, "
+    print("Please input the specific note number you want deleted, if you wish to delete all notes type 0"
           "if you'd like to go back enter B")
     print("-" * 30)
     while True:
@@ -100,13 +104,6 @@ def del_note(x: list):
         print("Please enter a valid note number to delete")
 
 
-def back(y):
-    if y == "Back".upper():
-        sys.exit()
-    else:
-        return None
-
-
 def menu():
     """print menu controls"""
     print("-" * 30)
@@ -118,6 +115,18 @@ def menu():
     print("Please enter 'D' to delete a specified note")
 
 
+def choices(choice, new_note):
+    """function checks the choice variable the user entered to call the appropriate function"""
+    match choice:
+        case "A":
+            add_note(new_note)
+        case "V":
+            view_notes(new_note)
+        case "E":
+            edit_note(new_note)
+        case "D":
+            del_note(new_note)
+
 
 print("NotePad!")
 print("*" * 10)
@@ -128,26 +137,8 @@ while True:
 
     menu()
 
-    choice = input("Please enter your choice: ").upper()
+    menu_choice = input("Please enter your choice: ").upper()
 
     print("-" * 30)
 
-    if choice == "A":
-        choice = ""
-        add_note(notes)
-
-    if choice == "V":
-        choice = ""
-        view_notes(notes)
-
-    if choice == "E":
-        choice = ""
-        edit_note(notes)
-
-    if choice == "E":
-        choice = ""
-        edit_note(notes)
-
-    if choice == "D":
-        choice = ""
-        del_note(notes)
+    choices(menu_choice, notes)
