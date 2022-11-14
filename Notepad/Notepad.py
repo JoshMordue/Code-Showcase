@@ -70,6 +70,9 @@ def add_note(x: list):
     print("Please input your note below")
     print("-" * 30)
     new_note = input()
+
+    back(new_note)
+
     x.append(new_note)
     save_changes(x)
     return x
@@ -79,7 +82,8 @@ def del_note(x: list):
     """delete notes using their index position, if provided with a  0 function will delete all notes"""
     view_notes(x)
     print("DELETING NOTES MENU!")
-    print("Please input the specific note number you want deleted, if you wish to delete all notes type 0")
+    print("Please input the specific note number you want deleted, if you wish to delete all notes type 0, "
+          "if you'd like to go back enter B")
     print("-" * 30)
     while True:
         del_choice = int(input())
@@ -96,14 +100,23 @@ def del_note(x: list):
         print("Please enter a valid note number to delete")
 
 
+def back(y):
+    if y == "Back".upper():
+        sys.exit()
+    else:
+        return None
+
+
 def menu():
     """print menu controls"""
+    print("-" * 30)
     print("MENU")
     print("-" * 30)
     print("Please enter 'A' to add a note")
     print("Please enter 'V' to view all notes")
     print("Please enter 'E' to edit a note")
     print("Please enter 'D' to delete a specified note")
+
 
 
 print("NotePad!")
