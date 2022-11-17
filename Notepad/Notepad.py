@@ -7,6 +7,7 @@ def read_notes(x):
         with open('Notes.txt', 'r', encoding='utf-8') as notes_file:
             for line in notes_file:
                 x.append(line.strip("\n"))
+            notes_file.close()
 
     except FileNotFoundError:
         print()
