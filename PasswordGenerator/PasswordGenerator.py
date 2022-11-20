@@ -58,7 +58,7 @@ op3 = tk.Checkbutton(window, text='Numbers', onvalue=1, offvalue=0)
 op4 = tk.Checkbutton(window, text='Symbols', onvalue=1, offvalue=0)
 Descript = tk.Label(window, text="Length of the Password")
 Password_length = tk.Scale(window, from_=5, to=20, orient='horizontal')
-PassDescript = tk.Button(window, text="Generate Password", command=user_choice)
+PassDescript = tk.Button(window, text="Generate Password", command=lambda: user_choice("op1))
 
 GenPass = tk.Label(window, width=40, height='3')
 
