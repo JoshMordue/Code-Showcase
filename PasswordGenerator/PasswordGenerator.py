@@ -19,6 +19,7 @@ def generator():
     option3 = op3.getvar()
     option4 = op4.getvar()
     password_length = Pass_length.get()
+    count = 0
 
     print(option1)
     print(op1)
@@ -26,12 +27,23 @@ def generator():
     if option1.get():
         print(lower)
         all_characters += lower
+        count += 1
     if option2 == 1:
         all_characters += upper
+        count += 1
     if option3 == 1:
         all_characters += numbers
+        count += 1
     if option4 == 1:
-        all_characters += symbols
+        all_characters +=
+        count += 1
+
+    for i in range(password_length):
+        for x in range(x)
+            password_length -= 1
+            if
+        for y in range(y)
+
 
     GenPass.insert(0, all_characters)
     print(all_characters)
