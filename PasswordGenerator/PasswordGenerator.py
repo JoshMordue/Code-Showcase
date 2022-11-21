@@ -5,6 +5,9 @@ import pyperclip
 
 
 def generator():
+    """assigns variables for the character types, clears the field (in the case of a user requiring another password.
+    depending on user choice on password strength, select a sample of random characters using upper,lower, numbers
+    and special characters. Send the randomised password to the GenPass field"""
     lowercase = string.ascii_lowercase
     uppercase = string.ascii_uppercase
     numbers = string.digits
@@ -26,12 +29,14 @@ def generator():
 
 
 def copy():
+    """copies the randomised password when generated to the users clipboard"""
     random_password = GenPass.get()
     random_password = random_password.replace(" ", "")
     pyperclip.copy(random_password)
 
 
 def build():
+    """handles all the .pack functions"""
     description.pack()
     weak_radioButton.pack()
     medium_radioButton.pack()
@@ -50,8 +55,9 @@ window.geometry('500x500')
 
 choice = tk.IntVar()
 
-description = tk.Label(window, bg='white', width=50, height='5', text="This application is for generating passwords.\n"
-                                                            "Please select from the checkboxes below your preferences")
+description = tk.Label(window, bg='white', width=50, height='5', text="PASSWORD GENERATOR\n"
+                                                            "Please select from the options below your password \n"
+                                                                      "strength preference")
 
 
 weak_radioButton = tk.Radiobutton(window, text='Weak', value=1, variable=choice)
