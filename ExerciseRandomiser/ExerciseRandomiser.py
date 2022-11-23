@@ -1,4 +1,3 @@
-import pickle
 from Functions import *
 
 filename = 'Preferences.txt'
@@ -11,8 +10,6 @@ exercise_data = {'a': [0, 1, 2, 3, 4],
 
 title()
 
-
-print_menu()
+current_rolls(exercise_data)
 
 print(exercise_data)
-
