@@ -8,12 +8,11 @@ exercise_data = {'a': [0, 1, 2, 3, 4],
                  'd': [0, 1, 2, 3, 4],
                  }
 
-read_data(exercise_data)
+
+title()
 
 
+print_menu()
 
 print(exercise_data)
 
-
-
-# print(word_list.values())
