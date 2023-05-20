@@ -1,20 +1,6 @@
 import pickle
 
 
-def read_data(exercise):
-    with open('Preferences.pkl', 'rb') as opened:
-        exercise = pickle.load(opened)
-
-    opened.close()
-    return exercise
-
-
-def save_data(dictionary):
-    with open('Preferences.pkl', 'wb') as Saved:
-        pickle.dump(dictionary, Saved)
-    Saved.close()
-
-
 def title():
     menu_text("*")
     menu_text("This application aims to make exercising more interesting, through the use of randomisation")
@@ -23,7 +9,6 @@ def title():
     menu_text()
     menu_text("Please press 'Enter' to start")
     menu_text("*")
-    choice = input()
 
 
 def menu_text(text: str = " ", screen_width: int = 120) -> None:
@@ -47,11 +32,36 @@ def menu_text(text: str = " ", screen_width: int = 120) -> None:
         print(output_string)
 
 
+def read_data(preference):
+    try:
+        with open(preference, 'r', encoding='utf-8') as user_data:
+            preference = pickle.load(user_data)
+
+
+
+
+
+
+def read_data(exercise):
+    with open('Preferences.pkl', 'rb') as opened:
+        exercise = pickle.load(opened)
+
+    opened.close()
+    return exercise
+
+
+def save_data(dictionary):
+    with open('Preferences.pkl', 'wb') as Saved:
+        pickle.dump(dictionary, Saved)
+    Saved.close()
+
+
+
 def current_rolls(exercise):
     for k in exercise:
         v = exercise[k]
-            menu_text(k)
-            menu_text(v)
+        menu_text(k)
+        menu_text(v)
 
 
 
