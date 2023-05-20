@@ -2,16 +2,15 @@ import pickle
 
 
 def title():
-    menu_text("*")
-    menu_text("This application aims to make exercising more interesting, through the use of randomisation")
-    menu_text("You can tailor the amount to your liking/ability - "
-              "the system will use defaults until it's been configured")
-    menu_text()
-    menu_text("Please press 'Enter' to start")
-    menu_text("*")
+    text_border("*")
+    text_border("This application aims to make exercising more interesting, through the use of randomisation")
+    text_border("You can tailor the amount to your liking/ability")
+    text_border()
+    text_border("Please press 'Enter' to start")
+    text_border("*")
 
 
-def menu_text(text: str = " ", screen_width: int = 120) -> None:
+def text_border(text: str = " ", screen_width: int = 120) -> None:
     """
     This function prints a string centred with ** on either side.
 
@@ -32,22 +31,22 @@ def menu_text(text: str = " ", screen_width: int = 120) -> None:
         print(output_string)
 
 
-def read_data(preference):
-    try:
-        with open(preference, 'r', encoding='utf-8') as user_data:
-            preference = pickle.load(user_data)
+def read_data(preference) -> dict:
+    try open(preference, 'r', encoding='utf-8') as user_data:
+        preference = pickle.load, read_data(preference)
+        print(preference)
+        return preference
+
+    except FileNotFoundError:
+        print(text_border('This looks to be your first time using this application'))
+        print(text_border('A file will be generated during this process which will contain your preferences'))
+        initial_preference(preference)
 
 
-
-
-
-
-def read_data(exercise):
-    with open('Preferences.pkl', 'rb') as opened:
-        exercise = pickle.load(opened)
-
-    opened.close()
-    return exercise
+def initial_preference():
+    while True:
+        print(text_border('Before we begin can you please provide an exercise you perform'))
+        exercise = text_border(input())
 
 
 def save_data(dictionary):
@@ -57,11 +56,6 @@ def save_data(dictionary):
 
 
 
-def current_rolls(exercise):
-    for k in exercise:
-        v = exercise[k]
-        menu_text(k)
-        menu_text(v)
 
 
 

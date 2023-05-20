@@ -14,11 +14,14 @@ choice = input()
 
 exercise_data = read_data(filename)
 
-
-
-
-
-
-current_rolls(exercise_data)
+if exercise_data == {}:
+    initial_preference(filename)
 
 print(exercise_data)
+
+
+
+
+
+
+
