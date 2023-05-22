@@ -32,8 +32,8 @@ def text_border(text: str = " ", screen_width: int = 120) -> None:
 
 
 def read_data(preference) -> dict:
-    try open(preference, 'r', encoding='utf-8') as user_data:
-        preference = pickle.load, read_data(preference)
+    try with open(preference, 'r', encoding='utf-8') as user_data:
+        preference =  read_data(preference)
         print(preference)
         return preference
 
