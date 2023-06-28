@@ -1,0 +1,8 @@
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\bin\Debug\AdventofCode-2015-Task2.exe.config
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\bin\Debug\AdventofCode-2015-Task2.exe
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\bin\Debug\AdventofCode-2015-Task2.pdb
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Debug\AdventofCode-2015-Task2.csproj.AssemblyReference.cache
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Debug\AdventofCode-2015-Task2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Debug\AdventofCode-2015-Task2.csproj.CoreCompileInputs.cache
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Debug\AdventofCode-2015-Task2.exe
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Debug\AdventofCode-2015-Task2.pdb

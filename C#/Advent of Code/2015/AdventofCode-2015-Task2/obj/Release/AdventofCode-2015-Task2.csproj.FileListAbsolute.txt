@@ -1,0 +1,3 @@
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Release\AdventofCode-2015-Task2.csproj.AssemblyReference.cache
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Release\AdventofCode-2015-Task2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joshu\Desktop\C#\AdventofCode-2015-Task2\obj\Release\AdventofCode-2015-Task2.csproj.CoreCompileInputs.cache

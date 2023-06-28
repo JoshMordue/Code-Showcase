@@ -1,0 +1,8 @@
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Release\Palindrome.csproj.AssemblyReference.cache
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Release\Palindrome.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Release\Palindrome.csproj.CoreCompileInputs.cache
+C:\Users\Joshu\Desktop\C#\Palindrome\bin\Release\Palindrome.exe.config
+C:\Users\Joshu\Desktop\C#\Palindrome\bin\Release\Palindrome.exe
+C:\Users\Joshu\Desktop\C#\Palindrome\bin\Release\Palindrome.pdb
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Release\Palindrome.exe
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Release\Palindrome.pdb

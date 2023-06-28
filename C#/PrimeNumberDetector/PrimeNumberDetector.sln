@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumberDetector", "PrimeNumberDetector.csproj", "{F7DC798D-05FC-4CFC-B846-C4FFA681AE22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7DC798D-05FC-4CFC-B846-C4FFA681AE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DC798D-05FC-4CFC-B846-C4FFA681AE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DC798D-05FC-4CFC-B846-C4FFA681AE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DC798D-05FC-4CFC-B846-C4FFA681AE22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CEDF779-04DC-45A1-BDF4-5A6DC37BAFD2}
+	EndGlobalSection
+EndGlobal

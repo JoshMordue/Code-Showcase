@@ -1,0 +1,3 @@
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Debug\Palindrome.csproj.AssemblyReference.cache
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Debug\Palindrome.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joshu\Desktop\C#\Palindrome\obj\Debug\Palindrome.csproj.CoreCompileInputs.cache

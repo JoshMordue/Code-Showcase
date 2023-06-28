@@ -1,0 +1,8 @@
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\obj\Debug\PrimeNumberDetector.csproj.AssemblyReference.cache
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\obj\Debug\PrimeNumberDetector.csproj.SuggestedBindingRedirects.cache
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\obj\Debug\PrimeNumberDetector.csproj.CoreCompileInputs.cache
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\bin\Debug\PrimeNumberDetector.exe.config
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\bin\Debug\PrimeNumberDetector.exe
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\bin\Debug\PrimeNumberDetector.pdb
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\obj\Debug\PrimeNumberDetector.exe
+C:\Users\Joshu\Desktop\C#\PrimeNumberDetector\obj\Debug\PrimeNumberDetector.pdb
